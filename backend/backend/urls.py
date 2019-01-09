@@ -19,5 +19,5 @@ from django.urls import path
 from webapp.views import CardView
 
 urlpatterns = [
-    path('cards/<str:playerClass>/', CardView.as_view()),
+    path('cards/<str:player_class>/', CardView.as_view()),
 ]
