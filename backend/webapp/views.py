@@ -24,7 +24,7 @@ class CardView(APIView):
             pk = random.randint(1, max_id)
 
             cardSet = CardSet.objects.get(name="Rastakhan’s Rumble")
-            
+
             # Filter card with random number and playerClass
             card = Card.objects.filter(Q(playerClass=player_class) | Q(playerClass='Neutral'), pk=pk, cardSet_id=cardSet.id).first()
             if card:
